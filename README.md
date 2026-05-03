@@ -46,6 +46,7 @@ A [blink.cmp](https://github.com/Saghen/blink.cmp) completion source for [Nerd F
 opts = {
     trigger = ':'
 }
+```
 
 ## Usage
 
