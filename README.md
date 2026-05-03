@@ -40,7 +40,7 @@ A [blink.cmp](https://github.com/Saghen/blink.cmp) completion source for [Nerd F
 
 | Option | Type | Default | Description |
 |---|---|---|---|
-| `trigger` | `string` | `:` | Trigger string that activate the source |
+| `trigger` | `string` | `:` | Trigger string that activates the source |
 
 ```lua
 opts = {
