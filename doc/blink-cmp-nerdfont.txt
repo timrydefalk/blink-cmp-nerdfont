@@ -1,0 +1,77 @@
+*blink-cmp-nerdfont.txt*
+                             For Neovim >= 0.10.0   Last change: 2026 May 03
+
+==============================================================================
+Table of Contents                            *blink-cmp-nerdfont-table-of-contents*
+
+1. blink-cmp-nerdfont                                 |blink-cmp-nerdfont-summary|
+2. Requirements                                  |blink-cmp-nerdfont-requirements|
+3. Installation                                  |blink-cmp-nerdfont-installation|
+4. Configuration                                |blink-cmp-nerdfont-configuration|
+
+==============================================================================
+1. blink-cmp-nerdfont                                    *blink-cmp-nerdfont-summary*
+
+A blink.cmp <https://github.com/Saghen/blink.cmp> completion source for 
+Nerd Font <https://www.nerdfonts.com/> glyphs.
+
+==============================================================================
+2. Requirements                                  *blink-cmp-nerdfont-requirements*
+
+- Neovim 0.10+
+- blink.cmp <https://github.com/Saghen/blink.cmp>
+- A Nerd Font <https://www.nerdfonts.com/> installed and configured in
+  your terminal
+
+==============================================================================
+3. Installation                                  *blink-cmp-nerdfont-installation*
+
+- lazy.nvim <https://github.com/folke/lazy.nvim>
+
+>lua
+    {
+        'saghen/blink.cmp',
+        dependencies = { 'timrydefalk/blink-cmp-nerdfont' },
+        opts = {
+            sources = {
+                default = { 'nerdfont' },
+                providers = {
+                    nerdfont = {
+                        module = "blink-cmp-nerdfont",
+                        name = "blink-cmp-nerdfont",
+                        max_items = 10,
+                        min_keyword_length = 1,
+                        score_offset = 10,
+                        opts = {
+                            trigger = ":"
+                        }
+                    },
+                }
+            }
+        }
+    }
+<
+
+==============================================================================
+4. Configuration                                *blink-cmp-nerdfont-configuration*
+
+Options are passed via the `opts` table of the blink.cmp provider configuration.
+
+(These are default values)
+
+>lua
+    opts = {
+        trigger = ":"
+    }
+<
+
+                                                  *blink-cmp-nerdfont-opts.trigger*
+
+opts.trigger ~
+
+  Type: `string`, Default: `":"`
+
+  The character that triggers glyph completions. When typed, the completion
+  menu will populate with available Nerd Font glyphs.
+
+vim:tw=78:ts=8:noet:ft=help:norl:
